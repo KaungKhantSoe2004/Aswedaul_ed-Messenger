@@ -122,7 +122,7 @@ function ChatRoomWithRoom({
   const messageInputRef = useRef(null)
   const messagesEndRef = useRef(null)
   const userDropdownRef = useRef(null)
-  const socket_domain_name = import.meta.env.VITE_SOCKET_DOMAIN_NAME || "http://localhost:4000/"
+  const socket_domain_name = import.meta.env.VITE_SOCKET_DOMAIN_NAME || "https://socket.z256600-ll9lz.ps02.zwhhosting.com/"
 
   const getOtherUser = () => {
     if (!roomDetails || roomDetails.type !== "private") return null
@@ -578,7 +578,7 @@ function StartConversationView({
   const theme = useSelector(store => store.theme.theme)
   const [showUserDropdown, setShowUserDropdown] = useState(false)
   const userDropdownRef = useRef(null)
-  const socket_domain_name = import.meta.env.VITE_SOCKET_DOMAIN_NAME || "http://localhost:4000/"
+  const socket_domain_name = import.meta.env.VITE_SOCKET_DOMAIN_NAME || "https://socket.z256600-ll9lz.ps02.zwhhosting.com/"
 
   const getInitials = (name) => {
     if (!name) return "??"

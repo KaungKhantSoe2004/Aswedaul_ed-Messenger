@@ -9,8 +9,8 @@ import { useNavigate } from "react-router-dom"
 
 export default function LoginPage() {
   const navigate = useNavigate()
-  const backend_domain_name = import.meta.env.VITE_BACKEND_DOMAIN_NAME || "http://localhost:1500/";
-  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "http://localhost:2000/";
+  const backend_domain_name = import.meta.env.VITE_BACKEND_DOMAIN_NAME || "https://eduserbackend.z256600-ll9lz.ps02.zwhhosting.com/";
+  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "https://edadminbackend.z256600-ll9lz.ps02.zwhhosting.com/";
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)

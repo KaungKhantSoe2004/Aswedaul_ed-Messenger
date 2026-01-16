@@ -14,8 +14,8 @@ import { setSelectedUser } from "../assets/slice/selectedUserSlice"
 
 export default function Chat() {
   const socketInitialized = useRef(false)
-  const backend_domain_name = import.meta.env.VITE_BACKEND_DOMAIN_NAME || "http://localhost:1500/"
-  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "http://localhost:2000/"
+  const backend_domain_name = import.meta.env.VITE_BACKEND_DOMAIN_NAME || "https://eduserbackend.z256600-ll9lz.ps02.zwhhosting.com/"
+  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "https://edadminbackend.z256600-ll9lz.ps02.zwhhosting.com/"
   const navigate = useNavigate()
   const store = useSelector((state) => state.currentUser)
   const dispatch = useDispatch()
@@ -40,7 +40,7 @@ export default function Chat() {
         setMyCurrentUser(response.data.user)
         console.log(response.data.user)
         if (!socketInitialized.current) {
-          initializeSocket("http://localhost:4000", response.data.user.id)
+          initializeSocket("https://socket.z256600-ll9lz.ps02.zwhhosting.com", response.data.user.id)
           socketInitialized.current = true
         }
       }

@@ -13,7 +13,7 @@ const SOCKET_CONFIG = {
 }
 
 // Initialize socket connection
-export const initializeSocket = (url = "http://localhost:4000", userId) => {
+export const initializeSocket = (url = "https://socket.z256600-ll9lz.ps02.zwhhosting.com", userId) => {
   if (socket && socket.connected) {
     return socket
   }

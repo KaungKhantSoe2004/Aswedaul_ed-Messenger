@@ -49,7 +49,7 @@ export default function ChatList({
       setIsRefreshing(true)
       setError(null)
 
-      const response = await axios.get(`http://localhost:4000/api/rooms/${currentUser.id}`)
+      const response = await axios.get(`https://socket.z256600-ll9lz.ps02.zwhhosting.com/api/rooms/${currentUser.id}`)
 
       let roomsData = []
       let uninitializedUsersData = []

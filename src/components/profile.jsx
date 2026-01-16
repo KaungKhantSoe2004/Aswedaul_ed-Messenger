@@ -23,7 +23,7 @@ export default function ProfilePage() {
     })
   }
   const backend_domain_name = import.meta.env.VITE_BACKEND_DOMAIN_NAME;
-  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "http://localhost:2000/";  
+  const admin_backend_domain_name = import.meta.env.ADMIN_BACKEND_DOMAIN_NAME || "https://edadminbackend.z256600-ll9lz.ps02.zwhhosting.com/";  
 
   const handleLogout = async() => {
     const response = await axios.post(`${backend_domain_name}api/user/chatLogout`, {}, {
