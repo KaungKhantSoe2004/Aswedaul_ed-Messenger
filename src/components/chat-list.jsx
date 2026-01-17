@@ -48,7 +48,7 @@ export default function ChatList({
       setIsLoadingRooms(true)
       setIsRefreshing(true)
       setError(null)
-
+      console.log(currentUser.id, 'is currentUser bro')
       const response = await axios.get(`https://socket.z256600-ll9lz.ps02.zwhhosting.com/api/rooms/${currentUser.id}`)
 
       let roomsData = []
