@@ -163,9 +163,9 @@ const setupChatListeners = () => {
 
   chatEvents.forEach(event => {
     socket.on(event, (data) => {
-      if(event == "receive_message"){
-        alert("Message Received ")
-      }
+      // if(event == "receive_message"){
+      //   alert("Message Received ")
+      // }
       emitToListeners(event, data)
     })
   })

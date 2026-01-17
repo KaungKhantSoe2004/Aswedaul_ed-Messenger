@@ -97,7 +97,7 @@ export default function ChatList({
       }
     }
   }, [currentUser.id])
-
+  // const navigate = useNavigate();
   const getFriendInfo = (room) => {
     if (!room || !room.participants || !Array.isArray(room.participants)) {
       return null
@@ -256,7 +256,9 @@ export default function ChatList({
           </div>
         </div>
 
-        <div className="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-white p-3 mb-3 border border-blue-100">
+        <div onClick={()=>{
+          navigate('/profile')
+        }} className="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-white p-3 mb-3 border border-blue-100">
           <div className="relative">
             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow">
               <img src={currentUser.profile ? `${backend_domain_name}uploads/${currentUser.profile}` : "/placeholder.svg"} alt={currentUser.name} className="w-full h-full object-cover" />
