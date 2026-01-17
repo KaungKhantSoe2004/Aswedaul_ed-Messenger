@@ -29,6 +29,7 @@ export default function ProfilePage() {
     const response = await axios.post(`${backend_domain_name}api/user/chatLogout`, {}, {
       withCredentials:true
     });
+    console.log(response, 'is response')
     if(response.status == 200){
          navigate("/login")
     }
