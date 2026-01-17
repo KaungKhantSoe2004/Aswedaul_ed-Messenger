@@ -78,38 +78,13 @@ export default function ChatList({
   }
 
   useEffect(() => {
+    console.log(`${currentUser.id}, is useeffect is calling `);
     fetchRooms()
   }, [currentUser.id])
 
   useEffect(() => {
     const handleNewMessage = (data) => {
-      // setRooms(prevRooms => {
-      //   const roomExists = prevRooms.some(r => r._id === data.roomId)
-      //   if (!roomExists) {
-      //     fetchRooms()
-      //     return prevRooms
-      //   }
-        
-      //   return prevRooms.map(room => {
-      //     if (room._id === data.roomId) {
-      //       const isFromCurrentUser = data.senderId === currentUser.id
-      //       return {
-      //         ...room,
-      //         last_message: data.message.content || data.message,
-      //         display_last_message: isFromCurrentUser 
-      //           ? `You: ${data.message.content || data.message}`
-      //           : data.message.content || data.message,
-      //         updated_at: new Date().toISOString(),
-      //         _moveToTop: true
-      //       }
-      //     }
-      //     return room
-      //   }).sort((a, b) => {
-      //     if (a._moveToTop && !b._moveToTop) return -1
-      //     if (!a._moveToTop && b._moveToTop) return 1
-      //     return new Date(b.updated_at) - new Date(a.updated_at)
-      //   })
-      // })
+
     }
 
     if (currentUser.id) {
