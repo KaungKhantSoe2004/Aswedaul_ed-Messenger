@@ -50,7 +50,7 @@ export default function ChatList({
       setError(null)
       console.log(currentUser.id, 'is currentUser bro')
       const response = await axios.get(`https://socket.z256600-ll9lz.ps02.zwhhosting.com/api/rooms/${currentUser.id}`)
-
+      console.log(response, 'is response')  
       let roomsData = []
       let uninitializedUsersData = []
       if (response.status === 200 && response.data) {
